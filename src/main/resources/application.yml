@@ -1,0 +1,26 @@
+#端口设置
+server:
+  port: 80
+
+#数据库设置
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/smartclassroom?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+      username: root
+      password: 123456
+
+#mybatis 驼峰命名设置 自己玩的时候可以开运行数据查看
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#mybatis-plus 数据自增 自己玩的时候可以开运行数据查看
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
